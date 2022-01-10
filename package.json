@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/carloshs1994/AwesomeBooksWithES6/issues"
   },
-  "homepage": "https://github.com/carloshs1994/AwesomeBooksWithES6#readme"
+  "homepage": "https://github.com/carloshs1994/AwesomeBooksWithES6#readme",
+  "dependencies": {
+    "full-icu": "^1.4.0",
+    "luxon": "^2.3.0"
+  }
 }

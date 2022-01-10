@@ -1,4 +1,4 @@
-import {updateDomAndLocalStorage, removeBook, books} from '../modules/index.js';
+import { updateDomAndLocalStorage, removeBook, books } from '../modules/index.js';
 
 export const addToLocalStorage = (books) => {
   localStorage.setItem('books', JSON.stringify(books));

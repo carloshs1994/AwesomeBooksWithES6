@@ -1,5 +1,5 @@
 import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
-import {appendBooksToList} from './addbooks.js';
+import { appendBooksToList } from './addbooks.js';
 import { Book } from './singleBook.js';
 
 export const list = document.querySelector('ul');
@@ -14,6 +14,9 @@ const contactTab = document.querySelector('.contact-tab');
 const listSection = document.getElementById('list-section');
 const formSection = document.getElementById('form-section');
 const contactSection = document.getElementById('contact-section');
+
+const DateTime = luxon.DateTime;
+console.log(DateTime.now());
 
 class Books {
   constructor() {
