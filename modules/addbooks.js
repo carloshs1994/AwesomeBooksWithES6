@@ -1,6 +1,6 @@
 import {list, books} from '../modules/index.js';
 
-export function appendBooksToList() {
+export const appendBooksToList = () => {
   list.innerHTML = '';
   books.bookList.forEach((book, index) => {
     const li = document.createElement('li');

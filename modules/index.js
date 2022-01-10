@@ -1,5 +1,6 @@
 import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
 import {appendBooksToList} from './addbooks.js';
+import { Book } from './singleBook.js';
 
 export const list = document.querySelector('ul');
 const form = document.querySelector('form');
@@ -44,14 +45,14 @@ function checkIfEmpty() {
 }
 
 
-export function updateDomAndLocalStorage() {
+export const updateDomAndLocalStorage = () => {
   appendBooksToList();
   localStorage.clear();
   addToLocalStorage(books);
   checkIfEmpty();
 }
 
-export function removeBook() {
+export const removeBook = () => {
   const removeButtons = document.getElementsByClassName('remove');
   for (let i = 0; i < removeButtons.length; i += 1) {
     const button = removeButtons[i];
@@ -66,12 +67,12 @@ export function removeBook() {
 
 /* eslint max-classes-per-file: ["error", 2] */
 
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
+// class Book {
+//   constructor(title, author) {
+//     this.title = title;
+//     this.author = author;
+//   }
+// }
 
 getFromLocalStorage();  // another js  file.
 
