@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.updateDomAndLocalStorage = updateDomAndLocalStorage;
-exports.removeBook = removeBook;
-exports.books = exports.list = void 0;
+exports.removeBook = exports.updateDomAndLocalStorage = exports.books = exports.list = void 0;
 
 var _localstorage = require("./localstorage.js");
 
 var _addbooks = require("./addbooks.js");
+
+var _singleBook = require("./singleBook.js");
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -30,6 +30,8 @@ var contactTab = document.querySelector('.contact-tab');
 var listSection = document.getElementById('list-section');
 var formSection = document.getElementById('form-section');
 var contactSection = document.getElementById('contact-section');
+var DateTime = luxon.DateTime;
+document.querySelector('.time-and-date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
 
 var Books =
 /*#__PURE__*/
@@ -72,14 +74,16 @@ function checkIfEmpty() {
   }
 }
 
-function updateDomAndLocalStorage() {
+var updateDomAndLocalStorage = function updateDomAndLocalStorage() {
   (0, _addbooks.appendBooksToList)();
   localStorage.clear();
   (0, _localstorage.addToLocalStorage)(books);
   checkIfEmpty();
-}
+};
 
-function removeBook() {
+exports.updateDomAndLocalStorage = updateDomAndLocalStorage;
+
+var removeBook = function removeBook() {
   var removeButtons = document.getElementsByClassName('remove');
 
   for (var i = 0; i < removeButtons.length; i += 1) {
@@ -91,22 +95,22 @@ function removeBook() {
       removeBook();
     });
   }
-}
-/* eslint max-classes-per-file: ["error", 2] */
-
-
-var Book = function Book(title, author) {
-  _classCallCheck(this, Book);
-
-  this.title = title;
-  this.author = author;
 };
+/* eslint max-classes-per-file: ["error", 2] */
+// class Book {
+//   constructor(title, author) {
+//     this.title = title;
+//     this.author = author;
+//   }
+// }
 
+
+exports.removeBook = removeBook;
 (0, _localstorage.getFromLocalStorage)(); // another js  file.
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  var newBook = new Book(title.value, author.value);
+  var newBook = new _singleBook.Book(title.value, author.value);
   title.value = '';
   author.value = '';
   books.addNewBook(newBook);

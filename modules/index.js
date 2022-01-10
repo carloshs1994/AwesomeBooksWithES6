@@ -16,7 +16,7 @@ const formSection = document.getElementById('form-section');
 const contactSection = document.getElementById('contact-section');
 
 const DateTime = luxon.DateTime;
-console.log(DateTime.now());
+document.querySelector('.time-and-date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
 
 class Books {
   constructor() {
