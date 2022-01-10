@@ -1,10 +1,10 @@
-//eslint-disable-next-line import/no-cycle
+//  eslint-disable-next-line import/no-cycle
 import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
-//eslint-disable-next-line import/no-cycle
-import  appendBooksToList  from './addbooks.js';
-import { Book } from './singleBook.js';
+//  eslint-disable-next-line import/no-cycle
+import appendBooksToList from './addbooks.js';
+import Book from './singleBook.js';
 
-const { DateTime } = luxon; //eslint-disable-line
+const { DateTime } = luxon; //  eslint-disable-line
 
 export const list = document.querySelector('ul');
 const form = document.querySelector('form');
