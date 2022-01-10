@@ -1,6 +1,7 @@
 import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
 import { appendBooksToList } from './addbooks.js';
 import { Book } from './singleBook.js';
+const { DateTime } = luxon;
 
 export const list = document.querySelector('ul');
 const form = document.querySelector('form');
@@ -15,8 +16,9 @@ const listSection = document.getElementById('list-section');
 const formSection = document.getElementById('form-section');
 const contactSection = document.getElementById('contact-section');
 
-const DateTime = luxon.DateTime;
-document.querySelector('.time-and-date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+setInterval(() => {
+  document.querySelector('.time-and-date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+}, 1000);
 
 class Books {
   constructor() {
