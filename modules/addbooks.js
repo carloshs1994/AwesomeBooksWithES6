@@ -1,6 +1,7 @@
-import {list, books} from '../modules/index.js';
+// eslint-disable-next-line import/no-cycle
+import { list, books } from './index.js';
 
-export const appendBooksToList = () => {
+const appendBooksToList = () => {
   list.innerHTML = '';
   books.bookList.forEach((book, index) => {
     const li = document.createElement('li');
@@ -16,4 +17,6 @@ export const appendBooksToList = () => {
     `;
     list.appendChild(li);
   });
-}
+};
+
+export default  appendBooksToList;

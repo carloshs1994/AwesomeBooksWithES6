@@ -1,7 +1,10 @@
+//eslint-disable-next-line import/no-cycle
 import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
-import { appendBooksToList } from './addbooks.js';
+//eslint-disable-next-line import/no-cycle
+import  appendBooksToList  from './addbooks.js';
 import { Book } from './singleBook.js';
-const { DateTime } = luxon;
+
+const { DateTime } = luxon; //eslint-disable-line
 
 export const list = document.querySelector('ul');
 const form = document.querySelector('form');
@@ -49,13 +52,12 @@ function checkIfEmpty() {
   }
 }
 
-
 export const updateDomAndLocalStorage = () => {
   appendBooksToList();
   localStorage.clear();
   addToLocalStorage(books);
   checkIfEmpty();
-}
+};
 
 export const removeBook = () => {
   const removeButtons = document.getElementsByClassName('remove');
@@ -68,18 +70,9 @@ export const removeBook = () => {
       removeBook();
     });
   }
-}
+};
 
-/* eslint max-classes-per-file: ["error", 2] */
-
-// class Book {
-//   constructor(title, author) {
-//     this.title = title;
-//     this.author = author;
-//   }
-// }
-
-getFromLocalStorage();  // another js  file.
+getFromLocalStorage();
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
