@@ -1,3 +1,5 @@
+import { addToLocalStorage, getFromLocalStorage } from './localstorage.js';
+
 const list = document.querySelector('ul');
 const form = document.querySelector('form');
 const title = document.querySelector('#title');
@@ -10,6 +12,7 @@ const contactTab = document.querySelector('.contact-tab');
 const listSection = document.getElementById('list-section');
 const formSection = document.getElementById('form-section');
 const contactSection = document.getElementById('contact-section');
+
 class Books {
   constructor() {
     this.bookList = [];
@@ -29,7 +32,7 @@ class Books {
   }
 }
 
-const books = new Books();
+export const books = new Books();
 
 function checkIfEmpty() {
   if (books.bookList.length !== 0) {
@@ -39,9 +42,7 @@ function checkIfEmpty() {
   }
 }
 
-function addToLocalStorage(books) {
-  localStorage.setItem('books', JSON.stringify(books));
-}
+
 
 function appendBooksToList() {
   list.innerHTML = '';
@@ -61,14 +62,14 @@ function appendBooksToList() {
   });
 }
 
-function updateDomAndLocalStorage() {
+export function updateDomAndLocalStorage() {
   appendBooksToList();
   localStorage.clear();
   addToLocalStorage(books);
   checkIfEmpty();
 }
 
-function removeBook() {
+export function removeBook() {
   const removeButtons = document.getElementsByClassName('remove');
   for (let i = 0; i < removeButtons.length; i += 1) {
     const button = removeButtons[i];
@@ -90,18 +91,7 @@ class Book {
   }
 }
 
-function getFromLocalStorage() {
-  if (localStorage.length !== 0) {
-    const booksFromLocStg = JSON.parse(localStorage.getItem('books'));
-    booksFromLocStg.bookList.forEach((book) => {
-      books.bookList.push(book);
-    });
-    updateDomAndLocalStorage();
-    removeBook();
-  }
-}
-
-getFromLocalStorage();
+getFromLocalStorage();  // another js  file.
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
