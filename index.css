@@ -36,8 +36,8 @@ main {
 }
 
 body {
-  background: url(background.jpg) no-repeat;
-  background-size: cover;
+  /* background: url(background.jpg) no-repeat; */
+  /* background-size: cover; */
   margin: 0;
 }
 
