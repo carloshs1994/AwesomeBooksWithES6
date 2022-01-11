@@ -1,76 +1,57 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+<h1 align="center">Awesome Books</h1>
 
-# Project Name
+## About The Project
 
-> One paragraph statement about the project.
+> We created an app to store, display and remove books from localStorage and UI. This project has been built with the help of modern CSS3 and ES6. Check the live demo to try.
 
-![screenshot](./app_screenshot.png)
+![screenshot](Screenshot1.png)
+![screenshot](Screenshot2.png)
 
-Additional description about the project and its features.
+### Built With
 
-## Built With
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [JS](https://www.javascript.com/)
 
-- Major languages
-- Frameworks
-- Technologies used
+### Live Demo
 
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+[Live Demo Link](https://carloshs1994.github.io/AwesomeBooksWithES6/)
 
 ## Authors
 
-👤 **Author1**
+👤 **Carlos Herver Solano**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@carloshs1994](https://github.com/carloshs1994)
+- Twitter: [Twitter]()
+- LinkedIn: [LinkedIn]()
 
-👤 **Author2**
+👤 **Boaz Aduda**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: []()
+- Twitter: [Twitter]()
+- LinkedIn: [LinkedIn]()
 
-## 🤝 Contributing
+👤 **Jose Herrera**
 
-Contributions, issues, and feature requests are welcome!
+- GitHub: []()
+- Twitter: [Twitter]()
+- LinkedIn: [LinkedIn]()
 
-Feel free to check the [issues page](../../issues/).
+## Getting Started
 
-## Show your support
+* You will not need additional instructions on installing Prerequisites.
+* In case you have node_modules on your folder Add them to .gitignore file before you a push.
 
-Give a ⭐️ if you like this project!
+### Prerequisites
 
-## Acknowledgments
+* No prerequisites needed for this project.
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
-## 📝 License
+## Contributing
 
-This project is [MIT](./MIT.md) licensed.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
